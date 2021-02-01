@@ -21,7 +21,7 @@ struct ListNode {
 	ListNode(int x) : val(x), next(0) { /* Empty */ }
 	ListNode(int x, ListNode* next) : val(x), next(next) { /* Empty */ }
 
-}
+};
 
 /// --------------------
 /// Forward Declarations
@@ -95,9 +95,11 @@ int main(int argc, char* argv[]) {
 
 		std::cout << sum->val;
 
+		sum = sum->next;
+
 	}
 
-	std::cout << endl;
+	std::cout << std::endl;
 	
 
 	return SUCCESS;
@@ -113,7 +115,7 @@ int main(int argc, char* argv[]) {
  * @param list1 The first number as a linked list
  * @param list2 The second number as a linked list
  */
-ListNode* addTwoNumbers(ListNode* list1, ListNode* list2) {
+ListNode* addTwoNumbers(ListNode* listNode1, ListNode* listNode2) {
 
         ListNode* list    = 0;
         ListNode* current = 0;
